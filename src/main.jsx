@@ -12,13 +12,13 @@ function MyAwesomeHeader() {
 function MainContent() {
   //const reactElement = createElement('h1', null, 'Hello ReactJS!');
   const reactElement = (
-    <>
+    <main>
       <h1 className="title">Why React is cool?</h1>
       <ul>
         <li>It is Composable!</li>
         <li>And it is also Declarative!</li>
       </ul>
-    </>
+    </main>
   );
   console.log(reactElement);
   return reactElement;
