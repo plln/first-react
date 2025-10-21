@@ -1,39 +1,46 @@
 import { createRoot } from 'react-dom/client';
+//import { createElement } from 'react';
 
 const root = createRoot(document.getElementById('root'));
 
-function MainElement() {
-    const jsxElement = (
-        <main>
-            <img src="/react-logo.png" width="60px" alt="React logo" />
-            <h1>Fun facts about React!</h1>
-            <ul>
-                <li>Was first released in 2013.</li>
-                <li>Was originally created by Jordan Walke.</li>
-                <li>Has well over 200k stars on GitHub.</li>
-                <li>Is maintained by Meta.</li>
-                <li>Powers thousands of enterprise apps, including mobile apps</li>
-            </ul>
-        </main>
-    );
-    console.log(jsxElement);
-    return jsxElement;
+function MyAwesomeHeader() {
+  return (
+    <h2 className="header">Awesome Header!</h2>
+  );
 }
 
-function PageElement() {
-    return (
-        <>
-            <h1>Why learn React?</h1>
-            <ul>
-                <li>Web development seems cool!</li>
-            </ul>
-        </>
-    );
+function MainContent() {
+  //const reactElement = createElement('h1', null, 'Hello ReactJS!');
+  const reactElement = (
+    <main>
+      <h1 className="title">Why React is cool?</h1>
+      <ul>
+        <li>It is Composable!</li>
+        <li>And it is also Declarative!</li>
+      </ul>
+    </main>
+  );
+  console.log(reactElement);
+  return reactElement;
+}
+
+function MyAwesomeFooter() {
+  return (
+    <h2 className="footer">Awesome Footer!</h2>
+  );
 }
 
 root.render(
-    <>
-        <MainElement />
-        <PageElement />
-    </>
+  <>
+    <MyAwesomeHeader />
+    <MainContent />
+    <MyAwesomeFooter />
+  </>
 );
+
+// imperative
+// const h1 = document.createElement('h1');
+// h1.textContent = 'This is imperative coding!';
+// h1.className = 'title';
+// const rootElement = document.getElementById('root');
+// rootElement.appendChild(h1);
